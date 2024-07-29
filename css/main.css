@@ -747,9 +747,10 @@ aside section
 .thumbnail-article {
   background: var(--grey-200);
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
   column-gap: 0.5rem;
-  height: 140px;
+  height: 250px;
   align-items: center;
   padding-left: 1rem;
   padding-right: 0.5rem;
@@ -759,8 +760,8 @@ aside section
 }
 
 .gallery-item {
-  width: 180px;
-  height: 100px;
+  width: 100%;
+  height: 150px;
   border: 2px solid var(--terciary-color);
 }
 
@@ -781,6 +782,33 @@ aside section
   color: var(--primary-color-900);
   margin-left: 1.5rem;
   font-size: 1rem;
+}
+
+@media screen and (min-width: 450px) {
+  .thumbnail-article {
+    grid-template-columns: auto 1fr;
+    height: 140px;
+  }
+
+  .gallery-item {
+    width: 180px;
+    height: 100px;
+    border: 2px solid var(--terciary-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .thumbnail-article {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    height: 250px;
+  }
+
+  .gallery-item {
+    width: 100%;
+    height: 150px;
+    border: 2px solid var(--terciary-color);
+  }
 }
 
 @media screen and (min-width: 993px) {
