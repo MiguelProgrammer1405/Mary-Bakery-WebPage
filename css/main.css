@@ -113,7 +113,7 @@ small,
 p {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  max-width: 40em;
+  /* max-width: 40em; */
 }
 
 blockquote {
@@ -752,8 +752,6 @@ aside section
   column-gap: 0.5rem;
   height: 250px;
   align-items: center;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
   width: 97%;
   margin: 0 auto 1rem;
   cursor: pointer;
