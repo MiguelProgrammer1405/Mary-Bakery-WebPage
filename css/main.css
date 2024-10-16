@@ -10,15 +10,15 @@
 :root {
   font-size: 16px;
   /* colors */
-  --primary-color-900: hsl(359, 100%, 34%);
-  --primary-color-800: hsl(359, 100%, 44%);
-  --primary-color-700: hsl(359, 100%, 54%);
-  --primary-color-600: hsl(359, 100%, 64%);
-  --primary-color-500: hsl(359, 100%, 84%);
-  --primary-color-400: hsl(359, 100%, 89%);
-  --primary-color-300: hsl(359, 100%, 94%);
-  --primary-color-200: hsl(359, 100%, 97%);
-  --primary-color-100: hsl(359, 100%, 99%);
+  --primary-color-900: hsl(0, 0%, 10%);
+  --primary-color-800: hsl(0, 0%, 20%);
+  --primary-color-700: hsl(0, 0%, 30%);
+  --primary-color-600: hsl(0, 0%, 40%);
+  --primary-color-500: rgb(0, 0, 0);
+  --primary-color-400: hsl(0, 0%, 60%);
+  --primary-color-300: hsl(0, 0%, 70%);
+  --primary-color-200: hsl(0, 0%, 80%);
+  --primary-color-100: hsl(0, 0%, 90%);
   /* grey colors */
   --grey-50: hsl(210, 20%, 98%);
   --grey-100: hsl(220, 14%, 96%);
@@ -31,9 +31,18 @@
   --grey-800: hsl(215, 28%, 17%);
   --grey-900: hsl(221, 39%, 11%);
   --grey-950: hsl(224, 71%, 4%);
-  --secondary-color: hsl(28, 70%, 64%);
-  --terciary-color: #b45c21;
-  --fourth-color: #e2bab1;
+  --secondary-color: hsl(18, 93%, 54%);
+  --terciary-color: #ff9a00;
+  --fourth-color-900: hsl(266, 82%, 30%);
+  --fourth-color-800: hsl(266, 82%, 40%);
+  --fourth-color-700: hsl(266, 82%, 50%);
+  --fourth-color-600: hsl(266, 82%, 60%);
+  --fourth-color-500: hsl(272, 79%, 51%); /* Color base */
+  --fourth-color-400: hsl(266, 82%, 70%);
+  --fourth-color-300: hsl(266, 82%, 80%);
+  --fourth-color-200: hsl(266, 82%, 90%);
+  --fourth-color-100: hsl(266, 82%, 95%);
+  --fifth-color: #85e21f;
   --black: #222;
   --white: #fff;
   --red-light: #f8d7da;
@@ -212,8 +221,8 @@ th {
 
 .btn {
   cursor: pointer;
-  color: var(--primary-color-900);
-  background: var(--primary-color-500);
+  color: var(--primary-color-100);
+  background: var(--fourth-color-500);
   border: transparent;
   border-radius: var(--border-radius);
   letter-spacing: var(--letter-spacing);
@@ -225,8 +234,8 @@ th {
 }
 
 .btn:hover {
-  background: var(--primary-color-700);
-  color: var(--white);
+  background: var(--fourth-color-900);
+  color: var(--primary-color-100);
   box-shadow: var(--shadow-3);
 }
 
@@ -438,7 +447,7 @@ navbar styles
 .img-container h1 {
   font-size: 1.5rem;
   margin-bottom: 0;
-  color: var(--primary-color-900);
+  color: var(--primary-color-100);
 }
 
 .toggle-btn {
@@ -489,7 +498,7 @@ navbar styles
 }
 
 .link-item:hover a {
-  color: var(--black);
+  color: var(--secondary-color);
 }
 
 .nav-fixed {
@@ -533,12 +542,12 @@ navbar styles
   }
 
   .links a {
-    color: var(--primary-color-900);
+    color: var(--primary-color-100);
     transition: var(--transition);
   }
 
   .link-item:hover a {
-    color: var(--white);
+    color: var(--secondary-color);
   }
 
   .links-container {
@@ -866,12 +875,13 @@ aside section
 }
 
 .list-title {
-  border-bottom: 2px dashed var(--primary-color-900);
+  border-bottom: 2px dashed var(--primary-color-100);
 }
 
 .list-title h4 {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  color: var(--fifth-color);
 }
 
 .ul {
@@ -884,8 +894,13 @@ aside section
 }
 
 .ul a {
-  color: var(--primary-color-900);
+  color: var(--primary-color-100);
   font-size: 1.3rem;
+  transition: var(--transition);
+}
+
+ul a:hover {
+  color: var(--fourth-color-500);
 }
 
 .social-ul {
